@@ -16,6 +16,7 @@ import { ConfigService } from '@nestjs/config';
           expiresIn: +configService.get<number>('JWT_EXPIRES_IN'),
         },
       }),
+      inject: [ConfigService],
     }),
   ],
   controllers: [AuthController],

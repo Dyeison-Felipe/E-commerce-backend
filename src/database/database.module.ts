@@ -8,7 +8,7 @@ import { DataSource } from 'typeorm';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env',
+      envFilePath: '.env.development',
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
