@@ -1,8 +1,6 @@
 import {
   Body,
   Controller,
-  HttpCode,
-  HttpStatus,
   Post,
   UsePipes,
   ValidationPipe,
@@ -15,7 +13,6 @@ import { ReturnLoginDto } from './dtos/returnLogin.dto';
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
-  @HttpCode(HttpStatus.OK)
   @UsePipes(ValidationPipe)
   @Post('login')
   async signIn(@Body() loginDto: LoginDto): Promise<ReturnLoginDto> {
